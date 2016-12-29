@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <group width="136" height="151" alignment="left" layout="vertical" id="CN7-sl-Dfu">
+                            <items>
+                                <label width="136" alignment="left" text="Bienvenidos a Pizza App. Aquí podrás ordenar nuestras deliciosas pizzas" textAlignment="left" numberOfLines="5" id="ps3-w0-7eh"/>
+                                <button width="1" alignment="center" title="Comenzar" id="Jlb-cl-coH">
+                                    <connections>
+                                        <segue destination="wpb-wO-ykg" kind="push" id="Nep-JZ-NTB"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="184" y="346"/>
+        </scene>
+        <!--Pizza SizeVC Watch-->
+        <scene sceneID="sqE-nJ-Kxj">
+            <objects>
+                <controller id="wpb-wO-ykg" customClass="PizzaSizeVCWatch" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="150" alignment="left" layout="vertical" id="PKE-dh-NHU">
+                            <items>
+                                <label width="136" alignment="left" text="Quiero una Pizza:" id="Ad3-xe-Avs"/>
+                                <button width="1" alignment="left" title="Grande" id="1RI-Zs-fDB">
+                                    <connections>
+                                        <action selector="grandeButton:" destination="wpb-wO-ykg" id="ebt-db-Y49"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Mediana" id="8UF-V6-Z4X">
+                                    <connections>
+                                        <action selector="medianaButton:" destination="wpb-wO-ykg" id="UKv-UU-c5g"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Chica" id="e9x-RT-uAs">
+                                    <connections>
+                                        <action selector="chicaButton:" destination="wpb-wO-ykg" id="fow-ec-lG0"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="495" y="326"/>
+        </scene>
+        <!--massTypeController-->
+        <scene sceneID="eC7-uU-CP7">
+            <objects>
+                <controller identifier="massTypeController" id="TCF-0w-zZu" customClass="MassTypeVCWatch" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="153" alignment="left" layout="vertical" id="WpW-lG-JG5">
+                            <items>
+                                <label alignment="left" text="Con la masa:" id="SoC-1n-dd7"/>
+                                <button width="1" alignment="left" title="Gruesa" id="6fp-4f-lgW">
+                                    <connections>
+                                        <action selector="gruesaButton:" destination="TCF-0w-zZu" id="qCJ-gB-68I"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Crujiente" id="N8l-pc-Xqh">
+                                    <connections>
+                                        <action selector="crujienteButton:" destination="TCF-0w-zZu" id="wnd-ny-fes"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Delgada" id="DvZ-iA-00S">
+                                    <connections>
+                                        <action selector="delgadaButton:" destination="TCF-0w-zZu" id="uFd-Vp-QVc"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="824" y="334"/>
+        </scene>
+        <!--cheeseTypeController-->
+        <scene sceneID="xn6-hi-MsZ">
+            <objects>
+                <controller identifier="cheeseTypeController" id="VHB-j0-Cw7" customClass="CheeseTypeVCWatch" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="189" alignment="left" layout="vertical" id="x1F-ca-unZ">
+                            <items>
+                                <label alignment="left" text="Tipo de queso:" id="r7K-1o-Mv2"/>
+                                <button width="1" alignment="left" title="Mozarella" id="xhZ-iO-MA0">
+                                    <connections>
+                                        <action selector="mozarelaButton:" destination="VHB-j0-Cw7" id="Lg0-T8-9DS"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Cheddar" id="rUU-Lo-ESW">
+                                    <connections>
+                                        <action selector="cheddarButton:" destination="VHB-j0-Cw7" id="jUF-gV-Blm"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Parmesano" id="eqD-hA-7LR">
+                                    <connections>
+                                        <action selector="parmesanoButton:" destination="VHB-j0-Cw7" id="e0S-v3-lJk"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Sin queso" id="RdR-Qg-8ox">
+                                    <connections>
+                                        <action selector="sinQuesoButton:" destination="VHB-j0-Cw7" id="SH6-Uh-l5r"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1145" y="357"/>
+        </scene>
+        <!--ingredientsTypeController-->
+        <scene sceneID="8UK-iW-hI3">
+            <objects>
+                <controller identifier="ingredientsTypeController" id="gau-AP-216" customClass="IngredientsVCWatch" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="475" alignment="left" layout="vertical" id="6RX-j3-Hks">
+                            <items>
+                                <label alignment="left" text="Con los siguientes ingredientes:" numberOfLines="3" id="3T3-Ug-Z0s"/>
+                                <button width="1" alignment="left" title="Jamón" id="wpO-0X-usQ">
+                                    <connections>
+                                        <action selector="jamonAction" destination="gau-AP-216" id="AbM-mb-H5R"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Pepperoni" id="maF-IQ-NfE">
+                                    <connections>
+                                        <action selector="pepperoniAction" destination="gau-AP-216" id="gr4-1M-q28"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Pavo" id="OKP-qx-1UA">
+                                    <connections>
+                                        <action selector="pavoAction" destination="gau-AP-216" id="A0H-yu-Uku"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Salchicha" id="Esa-6D-iTa">
+                                    <connections>
+                                        <action selector="salchichaAction" destination="gau-AP-216" id="vdU-ia-An8"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Aceituna" id="gfG-VA-BoV">
+                                    <connections>
+                                        <action selector="aceitunaAction" destination="gau-AP-216" id="afe-Nn-eKr"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Cebolla" id="1cd-vF-tls">
+                                    <connections>
+                                        <action selector="cebollaAction" destination="gau-AP-216" id="5rt-R9-hH3"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Pimiento" id="Ip2-99-2on">
+                                    <connections>
+                                        <action selector="pimientoAction" destination="gau-AP-216" id="zCL-sm-FOL"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Piña" id="bzS-q3-L0h">
+                                    <connections>
+                                        <action selector="pinaAction" destination="gau-AP-216" id="qCq-fh-Rqh"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Anchoa" id="unf-jw-ya9">
+                                    <connections>
+                                        <action selector="anchoaAction" destination="gau-AP-216" id="Jqr-8I-PvF"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Continuar" id="ouY-4O-VB9">
+                                    <color key="backgroundColor" red="0.95494216680526733" green="0.33837544918060303" blue="0.0044920188374817371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="continuarActin" destination="gau-AP-216" id="8Od-7o-iXI"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="aceitunaButton" destination="gfG-VA-BoV" id="D0U-EC-hV5"/>
+                        <outlet property="anchoaButton" destination="unf-jw-ya9" id="X6E-hW-Vna"/>
+                        <outlet property="cebollaButton" destination="1cd-vF-tls" id="tRp-cc-C62"/>
+                        <outlet property="jamonButton" destination="wpO-0X-usQ" id="cay-jq-7ba"/>
+                        <outlet property="pavoButton" destination="OKP-qx-1UA" id="jR7-96-L0s"/>
+                        <outlet property="peperoniButton" destination="maF-IQ-NfE" id="Toa-Qi-mSG"/>
+                        <outlet property="pimientoButton" destination="Ip2-99-2on" id="fQd-ag-wQs"/>
+                        <outlet property="pinaButton" destination="bzS-q3-L0h" id="fej-pt-I03"/>
+                        <outlet property="salchichaButton" destination="Esa-6D-iTa" id="bDS-9d-Jim"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1387" y="495"/>
+        </scene>
+        <!--checkOrderVC-->
+        <scene sceneID="os4-qX-yok">
+            <objects>
+                <controller identifier="checkOrderVC" id="Z7U-lr-6Gu" customClass="CheckOrderVC" customModule="pizzaWatch_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="299" alignment="left" layout="vertical" id="eeo-69-Ocp">
+                            <items>
+                                <label height="250" alignment="left" text="Revisa tu orden por favor: " numberOfLines="25" id="mwZ-U5-CxA"/>
+                                <button width="1" alignment="left" title="Ordenar" id="SCd-eT-e8r">
+                                    <connections>
+                                        <segue destination="AgC-eL-Hgc" kind="push" id="68N-Wh-ZO3"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="checkOrderLabel" destination="mwZ-U5-CxA" id="CAK-al-eYF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="907" y="-171"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="916"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="pizzaWatch_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="574" y="904"/>
+        </scene>
+    </scenes>
+</document>
